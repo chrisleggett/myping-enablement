@@ -1,5 +1,4 @@
 # SSO to ANY PingFederate environment with My Ping
---------------------------------------------------
 
 ## Prerequisites
 
