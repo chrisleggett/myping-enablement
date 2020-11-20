@@ -27,8 +27,11 @@ Here are the items you will need for this tutorial.
 6. Create a workspace and clone the myping-enablement workspace.
    
    a. > `cd ~ `
+
    b. > `mkdir gsa-enablement`
+
    c. > `cd gsa-enablement`
+   
    d. > `git clone https://github.com/chrisleggett/myping-enablement.git`
 
 ## Setup My Ping
