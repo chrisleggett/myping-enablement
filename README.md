@@ -19,10 +19,13 @@ Here are the items you will need for this tutorial.
 2. [Install](https://pingidentity-devops.gitbook.io/devops/devopsutils/pingdevopsutil#installation-and-upgrades) and configure the devops tool.
 3. [Create](https://helm.pingidentity.com/getting-started/#create-ping-devops-secret) a Ping DevOps secret.
 4. [Install](https://helm.pingidentity.com/getting-started/#install-helm-3) helm 3.
+   
    a. Continue to follow the instructions to add the Ping DevOps repo and charts.   
 5. Install k9s
+   
    a. `brew install derailed/k9s/k9s`
 6. Create a workspace and clone the myping-enablement workspace.
+   
    a. > `cd ~ `
    b. > `mkdir gsa-enablement`
    c. > `cd gsa-enablement`
