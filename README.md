@@ -29,7 +29,7 @@ Here are the items you will need for this tutorial.
    a. > `cd ~ `
    b. > `mkdir gsa-enablement`
    c. > `cd gsa-enablement`
-   d. > git clone 
+   d. > `git clone https://github.com/chrisleggett/myping-enablement.git`
 
 ## Setup My Ping
 
