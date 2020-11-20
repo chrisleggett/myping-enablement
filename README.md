@@ -28,7 +28,6 @@ Here are the items you will need for this tutorial.
    d. > git clone 
 
 ## Setup My Ping
----
 
 Lets setup My Ping to enable SSO to your PF environment.
 
@@ -40,7 +39,6 @@ Lets setup My Ping to enable SSO to your PF environment.
     a. Note: When first providing the redirect uri value, you can use a temporary value such as: https://localhost. This will allow you to advance the application creation workflow. You can add the correct value later, once it is known.
 
 ## Configure PF helm values
----
 
 Now that you have the metadata for your PingFederate administration console OIDC client.
 
@@ -48,7 +46,6 @@ Now that you have the metadata for your PingFederate administration console OIDC
 2. Provide the PingOne OIDC settings to your yaml file.
 
 ## Lets install the helm chart.
----
 
  1. Run the following command: > `helm install p1-sso-<your-username> pingidentity/devops -f p1-plus-pf.yaml`
  2. Fire up k9s. In another terminal window/tab run the following command:  > `k9s`
