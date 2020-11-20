@@ -10,6 +10,7 @@ Here are the items you will need for this tutorial.
 - helm *
 - MyPing (Trial) Account
 - AWS EKS cluster access *
+  - You should have recieved an email with the following [document](https://docs.google.com/document/d/10OGI2qPOt_T3kJCkitgmaIgagEz4zT_37w636Msgz9I/edit?usp=sharing) from the devops team with how to access your AWS account.
 - k9s
 
 ---
