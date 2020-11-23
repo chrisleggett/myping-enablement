@@ -70,9 +70,6 @@ pingfederate-admin:
 # Admin OIDC Authn Properties
 #
 ############################################################
-    PF_OIDC_CLIENT_ID: <My Ping P1 PingFederate Admin Console App Client ID>
-    PF_OIDC_CLIENT_AUTHN_METHOD: client_secret_basic
-    PF_OIDC_CLIENT_SECRET: <My Ping P1 PingFederate Admin Console App Client Secret>
     PF_OIDC_AUTHORIZATION_ENDPOINT: <My Ping P1 PingFederate Admin Console App Authz EP>
     PF_OIDC_TOKEN_ENDPOINT: <My Ping P1 PingFederate Admin Console App Token EP>
     PF_OIDC_USER_INFO_ENDPOINT: <My Ping P1 PingFederate Admin Console App Authz EP>
@@ -87,7 +84,10 @@ pingfederate-admin:
     PF_OIDC_ROLE_USERADMIN: fullAdmin
     PF_OIDC_ROLE_EXPRESSIONADMIN: fullAdmin 
 
-
+    PF_OIDC_CLIENT_ID: <My Ping P1 PingFederate Admin Console App Client ID>
+    PF_OIDC_CLIENT_SECRET: <My Ping P1 PingFederate Admin Console App Client Secret>    
+    PF_OIDC_CLIENT_AUTHN_METHOD: client_secret_basic
+    
 pingfederate-engine:
   image:
     tag: edge  # Uses images with the "edge" tag 
