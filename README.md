@@ -21,8 +21,7 @@ Here are the items you will need for this tutorial.
 4. [Install](https://helm.pingidentity.com/getting-started/#install-helm-3) helm 3.
    
    a. Continue to follow the instructions to add the Ping DevOps repo and charts.  
-   b. Add the following helm repo: > `helm repo add pingidentity https://helm.pingidentity.com/devops`
-   
+
 5. Install k9s
    
    a. `brew install derailed/k9s/k9s`

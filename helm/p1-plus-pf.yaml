@@ -1,4 +1,7 @@
 global: 
+  image:
+    tag: edge  # Uses images with the "edge" tag 
+    pullPolicy: Always 
   ############################################################
   #  addReleaseNameToResource: Provides global ability to add
   #                            names to kubernetes resources
@@ -30,10 +33,7 @@ global:
 #  - PingFederate Administrative Console with native authentication
 #  - PingFederate Engines clustered with console
 ############################################################
-pingfederate-admin:
-  image:
-    tag: edge  # Uses images with the "edge" tag
-    pullPolicy: Always   
+pingfederate-admin:  
   services:
     admin:
       port: 443
@@ -58,23 +58,23 @@ pingfederate-admin:
 # PingFederate Global Config
 #
 ############################################################
-    PF_BASE_URL: <PingFederate_Base_URL>
+    PF_BASE_URL: https://pingfederate-engine-p1-plus-cleggett.ping-devops.com
     PF_SSL_KEYPAIR: MIIQ8AIBAzCCELoGCSqGSIb3DQEHAaCCEKsEghCnMIIQozCCBq8GCSqGSIb3DQEHBqCCBqAwggacAgEAMIIGlQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQMwDgQIv4iU2c-xySECAggAgIIGaBxKc1CNFY6eYmpksse6YPESHOPcm_38hkIUpx4oUtW8bpMQZ_ie3mwD7YrwuD8_SUbx5cB1PiF_G6B-fSSNQzrNC-54Q89c4FI4JUGuc_FVvpH9xWldWBoxiS2XlB6gQMVSxQtMQEzyTvdT-4A7HVN0B1LiY9Q8Cxa-8Zy6xFq2t4K8nxXkL0IDPDYYHzvujza2u9MWS4REOClJ19RWrxnqJHSRqmFXeJlnVVoMSEvgAGywlZDijJ9x4mj6Lw0X7IUAYsHLkkduqy2E1U08GZ6ge3QOih46XhoaAg7L34TGX82qZd1mzZliSrgVhR-VAq7qUemtXDxp_iYLbO9EXIBSLDUdmfTW5TQpfm4BWAH_X8SmLyK9bu_kpfTiYsMNOwggZPHq6lM8i9Qui578R8daygjn78MRKjKgDuWJveo-WGlxDRElHknzdTTeyh6NZ474-sntvx5iXuvr64GN87AzVsNOy_whaWU9Yn54NOm-fpUj4HfMab7dm8ypGr2eiAHPiVy5Qn3KCOwWwMkj5WxvYwtOVqfVKH23MVyoG8kbgonGKhkGnKza-FKaOpfNWcv7SujiNCQjJ3Czgr9c0nWXO9eHL3fAN06tKK3RaJAbSj0G29kcHrKH6LGdRGWYMV_Nkw06fDxzlAwO3B4N-_cutt0_GIgEvIB0nFK8Cb5Nrbq03WrX3EBD3gpqznJGiPczrSFp6CVCSBUaJpTnYGXwVukdj5lXGUt3kBZCR7iMlYLd2FQGeYDisF-2ca0PWKmnpOrXEtl3B6BVSb5tJ1Q2ES7zY4o1wbgjM18VCjsmAAgEeqSNPkPKVZ6q35Hmi8xxdgJKUWe9xs6__Yec-CAfTiHSZldlxIVjcc1IMSLC2zOAwRiRgvs6vOaRMgp8CGpOdyii7Nh6fXQYFQ1tRHfoYSjPvm7xuEboZZf1ghg4LEG9tfIG7_HSdSUBgxnw0XGFQTMuCng7Nnx_QeTq7tCKGwynaPNMlYNJ_-8duh14NwS_Jre5g10W__sMFomJ0grkz6oErs5wvo8SC0lY08ItfmjDvFUS0sCViUnrFBKICjmFc_PEjP2f8bLXJUlbaFLrt_GFHm6NHDCv94dWeRwdcGduTxxkjOomZ28WMMmcBxqg2byAQSRx8jY-VppcO_nWM1DL0Pygq53Mp61aTekG63uJ4E13EVm0kshEoVoyMmO7whEPJoohYft9PCmn65v-LtbPPDwDbmx4RiRpJqKmoArqyO5Tn4kg4c-Pv9VouIniCmtLhgZAtdcR3ma-FhpQbEaH1IND-aHOMIe7BVVVXguEDj6rc_2e8mtsMIaqqvuJX5PCv38d4uju7LYSi0L2Xpcajgr1c72hctS9jTGXI0rgDh6yyQz7eJJidynOSdMkr5DPVNsvMRfrVejA-EkLXKlwHBbuVRH-TGbEAWSP--bb3pa1YSrAMkoXzFljAge14kZa4YqstH0cCu9IJqrSuvpRQz9D7P8nkccjnepicmstN18t8SEL2xpSzK-bKsNpkZsKJbhwnve6vMlIVhqbrJ1V9xPWaXwF7KuhSkCBOQ1XOeMfTdE3MEQtCVJeKMtx7P3oigON1ZmRKEAK6LmigZy4TgZxC4pAEXA7dP57TVOJCNJbLYRe-IrwgwBJwG-V1N45oVKjcpCBO7Sf2RgbSzcN5vROVP9vlysIEZW7nq4cD-N-pbTpi9j52Uh0J0WlRiG2f2wmbJG2KHJyUNFXAc0dI2Oz-Vw72UDHtbnLrGSpUrJVUhpO9V6DnLgbSpm_nhPSHjQ-ICSmiKVXkiPBD5NtTsH4clGlirXI8WTbuVPbvBCi0xed0LJ_gQJhaPi8dQvy1If2xx-CAwHGpuO13FEasWF2_JfhdWtDpYJk_aM0LRO5133-PFVwJJ19_GglDbQfILc36tyzqn6Dm69Xsvp7nifvZB9M3NbBjvu5vXQQyMt2dG9XTOKIIhReDb4TWdovG_pq6xlg2W1wj_vwyFzecK_YXHwzmktjjnGFpRpa6YqO7TBNgy8avRpEzSnHWC7Nj0igXYmUY6xSWSSn0GxjGgtsdSyGSqOhXHG_cG9azszJqonKvvhUekio25mtyW3S7IhncLTUXYUBj_PXPZL2qeRu9SWC8m8sWlLR1TCBBxlSIG88U379FrY1k6B485ouUXA-4iZ57xZxMosNvguSVmbPMIIJ7AYJKoZIhvcNAQcBoIIJ3QSCCdkwggnVMIIJ0QYLKoZIhvcNAQwKAQKgggl2MIIJcjAcBgoqhkiG9w0BDAEDMA4ECNZ6sJWCxny9AgIIAASCCVC75giMtmxhEJxU-_Okih1mhslxmjKBS94Svgm_XlneM19ZSbYhKUZVvNfdyOLz-F5puu5rVh44nABMH42Vepj0vfHLLuBYmKynrViRp3Mr0r_bvLu5DkQvGW105U7k1wkOLMExxTD9ZinSpNu4f2A_YkIlO_vndb66OwPzFZDI1gB93czU3psjsphmOXScv3M6N5CXVHaxNQqupkKsAG1U5c0gdkj0XSXnjQoclNDgkz92IEHRyixnuK3OccJXPmi7VS7hatX6bf6zo4w4oQ6XuPrwnYTdInW0k7EhlvR6nITD9wbBR3CnT8oqtLkU7ft0FWDe_8dkftKVwAWAe5pk5lz-fz2_hlG3PtjrEOT_k2vEs0cHfuCpThBmQTWGBiR9x6LaIMUI_KZRa56n_re2AIVcyXPwSjXg_uX0iXymrjWX0sJEvMC63SJ-4w1Mfx7ZxGsLwe9yriiUlezrVdz5qY-x1spY9y8y_KkZ7bXOaMIdwv7HzCzsdQTJoRT8IMAI-qg89NuvxUsA1WCgOXvWRIYZADAoqVDgfdhUHAiuDAABEiWcFAK4nQbHhvJvJZK-tYeBX5wuju9AnqjEj88An14c8wTKloNPhsoE1IIvThEOYM46xzQXg4LheOTIzGLXONPSShWfxmOxpPDWuVrJ5u40Migtabd6SIRuH3wcJAROiUf4dlIeSLseu68Kucd1zFCUGUwRzCbMfE1FM5lL7NnHZiqGXJFfSHMdm-ifa6Bd_gk1XlXBj9apc3JMrwK2Axv0SlPCPISLPmnzKehWU6Doz_aceG9MfJWEa7DYZu-_9ujm19FyeO3JVCs9gZh1O5f6ZHKKqzmdgrj7NuHF_5wp9FG1LAoUuxUNg_RiiogrPbzm4nnxhDAMe2m4PDFdN0RZbggcuGttrEf7xXbaq7HyaPnzzKgT9ZNn4Ygc1S_sGYBYKz0-XlTNyeREQBGBRjXD-NWR62Be0xVz4wyPWbjt14YAj_qjpomeQZhKnoJZ0aCpz9zN1_boOdB2Mvr6Pwg0AA887sFNa33u_18w9Bdes8MhzW6qgk27VPjjfWPT928UQjRNgxZtdWLue2k-cUvJ3bKU7DT9bz-akN_nKrVn5MWhJY00k76fl9Kgyojr1UxFZFEkL4BnmX4_7hZrvp_vaNIiQnKbFrm1tD45F3AjiphutAvDQ2izKCDXnAvaiGzTqvuxCumiomdOAd1bWPQp0520uL7aVXAFPDMF4OMVN03SFg86-SKQURWepXofLqED6pSL7aO063veDW6zGpkgD-Au8wmi318WrHeI2kfNoBMCfN7IfUHqTxtRa_t7wt_-_IlbCkPOWYHFR7V7PdwnqFw86WnZcdQEwjyGvZVQYtXvGGgzDvSsz_7Vk5qv5So8NS2HseR7yux_n7KFYVMl2G7VRIkqheMwXwffNzhgCSiEbiteZ_XZCloZM4gOIhPdmWyXrRmRP7AMH5fLn5SCOSiSSiI3-JJ3swwim0z_GzFptpJ3QnqrlJnXSGSjw1DWDhZSh76pkT4lL4kC0L3r_IZ_PdUxVObD09dAvZf3UovtKEZrxVXfrax7BVLXTW58seYj7BVvkcEocGP4iXvH9tzUNv_VDvqhyVHOWP5r7xywtnJYkwyR2-JfPvHfG56fRtiRT6YwzxuOpqdVD-UO-axA9OEjtFezbUi06giO745JuwCaRJTx5oryN2p_yflpeWaqnFK_ZckUUTarkmBx_WVEVMsBXZUxTzrhBMbCkIo7RbpzOfcaCUuUspBFzoXPsu_qpw1a_oA_CARo91NiMOb1m8-YK6FQ5KoDitqrbpTpa1JCkuggpknelfG9cz3P3VnVSgOQIluizn4UFdRf2sXgENNJRbQc8vOMjYKtBgcrrbB9hb7tq51CUtr0mVXf7RmnW8jtBA_SIsVrHUro_2Kg5ZTtM-MpI38SUDWTNBnwOMvzlYdud9xjYl13PReW_8mg98AdQl19OP03Ms3BHQY5zZRc5t2sM2CkHbdQeijCbBZtJ-8yyah9MPc_dqETXWldtHQ1ofKRcJZMRPIA6uKk3mVqvRiayv0T21I0yfw35lnaQX2yh6m6QzYP-8nNqMuxGPWallBbMOOhiw3f0gJyg1BKizScQWFCwqTD85soqzWf7c9xL-TZBBLHDaxRdq1meX2vCD_zziyzxh2NMJYHnjWR0bpSRsfAbGbP-cPgiY6EWiIoLK5QO4xgAY6-8mXv9MSQ3EB12Q6hmPjZSzwVaf0gNWXPlFS7nrdp_PDK-jaDeL5C4wZ4aR4Jps3lS7vi5H_FidWynDS23Bh5_2KuwbshQ9HMP58htfLCZvRWfv2VnjLvinZn5MSf8Ux2-dadbuEpfSU3t4JvYFoH3W3Ul2ELQhLMr-0CZ8RWE9Vl6h-P4Uj0JxJp43sUFkNGvpPN0uTBlfvxerFo-8QgFEDYwbDOWyuGgQpwoxMr1u9S0SM0bH9qC22UtEOdWWtCkYSetgBCVSViWti9s9J80F8HnH3tjSDZQXdnhw9q57JLMXq4YFuaRJt_Q8WlhCihgVazqcXX6GSYY3IpT7wTzku8rb8TVGlMzPxpfW6w6icTDHmYdWceH2v5f3rtmyO6j4XtQY9mY-7j1DQAWS-ybtMm5Mqcd-aGevlF_xXWt9mjS_rgAcewXskK-DAxNIMT78GM_vqs6URm25g5S2hzacecJV04mKmzUnZmNMbK7ond3BJUrT-_jYF_zUk8s2tjHCWPYvq0_VegnUZw4A1mO9B8Oe9LtMNdl9R8QBCQPcxDHZXxzm7PhJCxBKEgA8KMxkY85iMeKJcVgymoWUnxutX3L7kePbb5E-3KHyIukpP78_CovRKyHJ_HZS-71vjfamb2N9SCF3wyvQhDqXm8tJ_lBKP5A9s2NZfUBrFoCQdhSe6zfMf5cuwBTdyiMVqJuYSZZCi2gXi0H1UmsP_Tz4DsmZgh1zWqtbHJbT8DBwNB4pJpnm9Dfk4wOUfuU9i5steHlL5HnVqAW9UnRX3H9yuaa-RtKPyE-G7J4tNa6M38u5kCpsm-m_lIWDJ4o3Lmt9tQBTgO1dVA_OZf0tLsi0lPhrX77PxzYDUFOSGBnwOmEHLp4lenMckPcRxECwtxzU0Vfy0lY560Pg7sNyW2UPAdoX4doc0SKAxcEbvyH6DqG9-GiTIWWfONcTFIMCEGCSqGSIb3DQEJFDEUHhIAbABvAGMAYQBsAGgAbwBzAHQwIwYJKoZIhvcNAQkVMRYEFBHTv0iXExEeQZ6HBQdIi0SEapXSMC0wITAJBgUrDgMCGgUABBRi3oeMRaNswCuYpZ73HnGQ3MVR6QQISN-n78Bv68o
     PF_SSL_KEYPAIR_PASSWORD: 2Federate
     PF_CONSOLE_AUTHENTICATION: OIDC
     PF_ADMIN_API_AUTHENTICATION: NATIVE
-    PF_ADMIN_PUBLIC_HOSTNAME: <PingFederate_Admin_Ingress_Host>
+    PF_ADMIN_PUBLIC_HOSTNAME: pingfederate-admin-p1-plus-cleggett.ping-devops.com
     PF_ADMIN_PORT: "443"
 
 ############################################################
 # Admin OIDC Authn Properties
 #
 ############################################################
-    PF_OIDC_AUTHORIZATION_ENDPOINT: <My Ping P1 PingFederate Admin Console App Authz EP>
-    PF_OIDC_TOKEN_ENDPOINT: <My Ping P1 PingFederate Admin Console App Token EP>
-    PF_OIDC_USER_INFO_ENDPOINT: <My Ping P1 PingFederate Admin Console App Authz EP>
-    PF_OIDC_USER_SESSION_ENDPOINT: <My Ping P1 PingFederate Admin Console App SignOff EP>
-    PF_OIDC_ISSUER: <My Ping P1 PingFederate Admin Console App Issuer>
+    PF_OIDC_AUTHORIZATION_ENDPOINT: https://auth.pingone.com/0d58b886-c562-4570-8505-4c21d0ed9907/as/authorize
+    PF_OIDC_TOKEN_ENDPOINT: https://auth.pingone.com/0d58b886-c562-4570-8505-4c21d0ed9907/as/token
+    PF_OIDC_USER_INFO_ENDPOINT: https://auth.pingone.com/0d58b886-c562-4570-8505-4c21d0ed9907/as/userinf
+    PF_OIDC_USER_SESSION_ENDPOINT: https://auth.pingone.com/0d58b886-c562-4570-8505-4c21d0ed9907/as/signoff
+    PF_OIDC_ISSUER: https://auth.pingone.com/0d58b886-c562-4570-8505-4c21d0ed9907/as
     PF_OIDC_SCOPES: openid email profile 
     PF_OIDC_ACR_VALUES: ""
     PF_OIDC_USERNAME_ATTRIBUTE_NAME: name
@@ -84,14 +84,11 @@ pingfederate-admin:
     PF_OIDC_ROLE_USERADMIN: fullAdmin
     PF_OIDC_ROLE_EXPRESSIONADMIN: fullAdmin 
 
-    PF_OIDC_CLIENT_ID: <My Ping P1 PingFederate Admin Console App Client ID>
-    PF_OIDC_CLIENT_SECRET: <My Ping P1 PingFederate Admin Console App Client Secret>    
+    PF_OIDC_CLIENT_ID: 6f7a391f-c9ba-491e-9f0b-3f9a3848a6ac
+    PF_OIDC_CLIENT_SECRET: _yY0punRTUDYIYLeAaFvjzz.Gj4YzvFfNd9mMr~598d.Sq5JzM.vzizit8J9tLS2    
     PF_OIDC_CLIENT_AUTHN_METHOD: client_secret_basic
-    
+
 pingfederate-engine:
-  image:
-    tag: edge  # Uses images with the "edge" tag 
-    pullPolicy: Always 
   enabled: true
   envs:
     PF_LOG_LEVEL: DEBUG
@@ -100,7 +97,4 @@ pingfederate-engine:
     SERVER_PROFILE_PATH: server-profile/pf-min
     SERVER_PROFILE_BRANCH: main
     PF_ADMIN_PORT: "443"
-
-    PF_ADMIN_PUBLIC_HOSTNAME: <PingFederate_Admin_Ingress_Host>
-    # TODO: fix DNS query location for clustering
-    DNS_QUERY_LOCATION: <chart release name>-pingfederate-admin-cluster.<K8s Namespace>.svc.cluster.local
+    PF_ADMIN_PUBLIC_HOSTNAME: pingfederate-admin-p1-plus-cleggett.ping-devops.com
