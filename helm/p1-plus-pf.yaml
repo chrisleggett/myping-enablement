@@ -104,6 +104,3 @@ pingfederate-engine:
     PF_ADMIN_PUBLIC_HOSTNAME: <PingFederate_Admin_Ingress_Host>
     # TODO: fix DNS query location for clustering
     DNS_QUERY_LOCATION: <chart release name>-pingfederate-admin-cluster.<K8s Namespace>.svc.cluster.local
-
-
-
