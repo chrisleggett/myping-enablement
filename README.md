@@ -55,7 +55,7 @@ Now that you have the metadata for your PingFederate administration console OIDC
 
 ## Lets install the helm chart.
 
- 1. Run the following command: > `helm install p1-sso-<your-username> pingidentity/devops -f p1-plus-pf.yaml`
+ 1. Run the following command: > `helm install p1-plus-<your-username> pingidentity/ping-devops -f p1-plus-pf.yaml`
  2. Fire up k9s. In another terminal window/tab run the following command:  > `k9s`
  3. Back to the k9s interface and lets locate the ingress host value for the pingfederate admin console.
  4. Access My Ping and lets add another environment that includes PingFederate. 
