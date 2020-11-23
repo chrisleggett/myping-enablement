@@ -17,7 +17,7 @@ global:
   # ingress.defaultTlsSecret: Replaces with "_defaultTlsSecret_" in tls.secretName
   ############################################################
   ingress:
-    addReleaseNameToHost: subdomain
+    addReleaseNameToHost: append
     enabled: true
     defaultDomain: "ping-devops.com"
   #vault:
@@ -63,7 +63,7 @@ pingfederate-admin:
     PF_SSL_KEYPAIR_PASSWORD: 2Federate
     PF_CONSOLE_AUTHENTICATION: OIDC
     PF_ADMIN_API_AUTHENTICATION: NATIVE
-    PF_ADMIN_PUBLIC_HOSTNAME: <PingFederate_Ingress_Host>
+    PF_ADMIN_PUBLIC_HOSTNAME: <PingFederate_Admin_Ingress_Host>
     PF_ADMIN_PORT: "443"
 
 ############################################################
@@ -100,7 +100,9 @@ pingfederate-engine:
     SERVER_PROFILE_PATH: server-profile/pf-min
     SERVER_PROFILE_BRANCH: main
     PF_ADMIN_PORT: "443"
-    PF_ADMIN_PUBLIC_HOSTNAME: <PingFederate_Ingress_Host>
+
+    PF_ADMIN_PUBLIC_HOSTNAME: <PingFederate_Admin_Ingress_Host>
+    # TODO: fix DNS query location for clustering
     DNS_QUERY_LOCATION: <chart release name>-pingfederate-admin-cluster.<K8s Namespace>.svc.cluster.local
 
 
