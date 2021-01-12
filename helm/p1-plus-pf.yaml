@@ -35,9 +35,10 @@ global:
 ############################################################
 pingfederate-admin:
   services:
-    admin:
-      port: 443
-      targetPort: 443
+    https:
+      servicePort: 443
+      containerPort: 443
+      ingressPort: 443
       dataService: true
   ingress:
     hosts:
@@ -45,7 +46,7 @@ pingfederate-admin:
         paths:
         - path: /
           backend:
-            servicePort: 443 
+            serviceName: https 
   enabled: true
   envs:
     PF_LOG_LEVEL: DEBUG
